@@ -57,6 +57,7 @@
       "git add"
     ]
   },
+  "module": "dist/vlh-forms.common.min.js",
   "main": "dist/vlh-forms.common.min.js",
   "unpkg": "dist/vlh-forms.umd.min.js",
   "jsdelivr": "dist/vlh-forms.umd.min.js",
