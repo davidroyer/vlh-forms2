@@ -7,7 +7,6 @@ import FormField from "./FormField.vue";
  * <form-phone v-model="submit.phone"/>
  * ```
  */
-
 export default {
   name: "form-phone",
   extends: FormField,

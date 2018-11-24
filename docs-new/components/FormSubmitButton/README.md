@@ -1,5 +1,5 @@
 
-# VButtonSpinner
+# form-submit-button
 
 
 ## Props
@@ -13,7 +13,7 @@
 
   
 
-- `status` ***String|boolean***
+- `status` ***String***
 
   
 
