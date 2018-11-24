@@ -54,7 +54,7 @@ import FormItemMixin from "../mixins/FormItemMixin";
  * such as degree levels or programs
  *
  * ```html
- * <form-select name="program" label="Select a Program" v-model="submit.program" :options="programs">
+ * <form-select name="program" label="Select a Program" v-model="submit.program" :options="programs"/>
  * ```
  */
 export default {
