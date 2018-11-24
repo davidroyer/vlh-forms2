@@ -1,5 +1,4 @@
 const vDocs = require("@droyer/vdocs");
-console.log("vDocs from new vdocs.run.js file", vDocs);
 
 vDocs.init({
   /**

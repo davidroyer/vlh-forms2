@@ -1,5 +1,12 @@
 # vlh-forms2
 
+## For external use
+
+Use this script
+`https://cdn.jsdelivr.net/gh/davidroyer/vlh-forms2/dist/vlh-forms.umd.min.js`
+
+See this example: [Codepen](https://codepen.io/droyer01/pen/gvOzEO?editors=1010)
+
 ## Project setup
 ```
 yarn install

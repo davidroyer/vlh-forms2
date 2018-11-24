@@ -75,6 +75,4 @@ if (typeof window !== "undefined" && window.Vue && window.VeeValidate) {
   window.Vue.use(VlhForms);
 }
 
-// export default VlhForms;
-
 export default VlhForms;

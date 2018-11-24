@@ -15,6 +15,7 @@ module.exports = {
         { text: 'Components', link: '/components/' },
         { text: 'Examples', link: '/examples/' }
       ],
+      // sidebar: 'auto'      
       sidebar: [
         '/',
         '/guide/',
