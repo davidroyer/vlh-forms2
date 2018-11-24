@@ -36,7 +36,7 @@ export default {
       default: true
     },
     status: {
-      type: [String, Boolean],
+      type: String | Boolean,
       default: ""
     },
     color: String,

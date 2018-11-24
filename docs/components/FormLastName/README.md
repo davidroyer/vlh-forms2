@@ -38,11 +38,11 @@ The form component for last names
 
 - `name` ***String***
 
-  Name attribute
+  
 
 - `label` ***String***
 
-  Label for form item
+  
 
 
 

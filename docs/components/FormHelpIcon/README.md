@@ -9,7 +9,7 @@ Icon
 
   
 
-- `icon` ***String|object|func|array***
+- `icon` ***String|object|array***
 
   
 

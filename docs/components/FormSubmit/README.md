@@ -1,6 +1,10 @@
 
 # form-submit
+Form submit button
 
+```html
+<form-submit :disableOnErrors="true" text="Get Info"/>
+```
 
 ## Props
 

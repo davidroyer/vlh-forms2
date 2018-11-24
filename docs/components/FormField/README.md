@@ -55,14 +55,3 @@ The base component for all inputs
 
 
 
-## Methods
-
-- `checkFieldValidity`
-
-        
-,
-- `focusListener`
-
-        
-
-

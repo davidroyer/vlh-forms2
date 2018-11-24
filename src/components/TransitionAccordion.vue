@@ -1,12 +1,6 @@
 <template>
-  <transition
-    name="accordion"
-    @before-enter="beforeEnter"
-    @enter="enter"
-    @before-leave="beforeLeave"
-    @leave="leave"
-  >
-    <slot />
+  <transition name="accordion" @before-enter="beforeEnter" @enter="enter" @before-leave="beforeLeave" @leave="leave">
+    <slot/>
   </transition>
 </template>
 
@@ -36,4 +30,5 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

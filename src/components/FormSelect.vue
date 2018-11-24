@@ -65,10 +65,7 @@ export default {
      * What the form-field is binding to
      * @model
      */
-    value: {
-      type: String,
-      default: ""
-    },
+    value: "", // eslint-disable-line
 
     /**
      * Array of options for select menu

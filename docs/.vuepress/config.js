@@ -1,4 +1,3 @@
-// .vuepress/config.js
 const componentsNav = require('./components-nav.json')
 
 module.exports = {
@@ -13,7 +12,8 @@ module.exports = {
       nav: [
         { text: 'Home', link: '/' },
         { text: 'Guide', link: '/guide/' },
-        { text: 'Components', link: '/components/' }
+        { text: 'Components', link: '/components/' },
+        { text: 'Examples', link: '/examples/' }
       ],
       sidebar: [
         '/',
@@ -25,7 +25,17 @@ module.exports = {
         },  
         '/examples/'    
       ]      
-    }
+    },
+      /**
+       * Allows the use of using aliases in markdown
+       */
+      configureWebpack: {
+        resolve: {
+          alias: {
+            '@images': './../images'
+          }
+        }
+      }         
   }
 
 // module.exports = {

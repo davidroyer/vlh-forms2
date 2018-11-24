@@ -1,14 +1,6 @@
 <template>
-  <transition
-    mode="out-in"
-    appear
-    name="transition-step"
-    @before-enter="beforeEnter"
-    @enter="enter"
-    @before-leave="beforeLeave"
-    @leave="leave"
-  >
-    <slot />
+  <transition mode="out-in" appear name="transition-step" @before-enter="beforeEnter" @enter="enter" @before-leave="beforeLeave" @leave="leave">
+    <slot/>
   </transition>
 </template>
 
@@ -38,4 +30,5 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

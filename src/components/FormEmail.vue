@@ -3,6 +3,7 @@ import FormField from "./FormField.vue";
 
 /**
  * The form component for phone numbers
+ *
  * ```html
  * <form-email v-model="submit.email"/>
  * ```

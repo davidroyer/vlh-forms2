@@ -1,9 +1,9 @@
 
 # form-zip
-The base component for all inputs
+The zip component
 
 ```html
-<form-field id="text" v-model="submit.formField" label="Form Field Example"/>
+<form-zip v-model="submit.zip"/>
 ```
 
 ## Props

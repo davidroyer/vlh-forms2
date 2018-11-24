@@ -4,7 +4,7 @@ The select menu element used for displaying a list of options
 such as degree levels or programs
 
 ```html
-<form-select name="program" label="Select a Program" v-model="submit.program" :options="programs">
+<form-select name="program" label="Select a Program" v-model="submit.program" :options="programs"/>
 ```
 
 ## Props
@@ -22,9 +22,9 @@ such as degree levels or programs
 
   id attribute
 
-- `v-model` ***String***
+- `value` ***Undefined***
 
-  What the form-field is binding to
+  
 
 - `options` ***Array***
 
@@ -62,16 +62,5 @@ such as degree levels or programs
 
   This isn't correct      
 
-
-
-## Methods
-
-- `checkFieldValidity`
-
-        
-,
-- `focusListener`
-
-        
 
 
