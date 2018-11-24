@@ -8,7 +8,8 @@ module.exports = {
     themeConfig: {
       repo: "davidroyer/vlh-forms2",
       repoLabel: "Github Repo",
-      editLinks: true,      
+      editLinks: true,
+      docsDir: "docs",    
       nav: [
         { text: 'Home', link: '/' },
         { text: 'Guide', link: '/guide/' },
