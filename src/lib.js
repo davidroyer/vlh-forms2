@@ -6,7 +6,10 @@ import "./assets/styles/vlh-forms.scss";
 // or with global options Vue.use(VuePromiseBtn, {})
 // Register all Vue components in the `component` folder
 const VlhFormComponents = require.context("./components", true, /.vue$/);
-
+// function install(Vue) {
+//   Vue.component('HelloA', HelloA)
+//   Vue.component('HelloB', HelloB)
+// }
 const VlhForms = {
   install(Vue, options) {
     VlhFormComponents.keys().forEach(ComponentFileName => {
@@ -75,4 +78,6 @@ if (typeof window !== "undefined" && window.Vue && window.VeeValidate) {
   window.Vue.use(VlhForms);
 }
 
-export default VlhForms;
+// export default VlhForms;
+
+export default { install: VlhForms }
