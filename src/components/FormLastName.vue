@@ -1,6 +1,5 @@
 <script>
 import FormField from "./FormField.vue";
-import mixinA from "../mixins/mixinA";
 import FormItemMixin from "../mixins/FormItemMixin";
 
 /**
@@ -11,7 +10,7 @@ import FormItemMixin from "../mixins/FormItemMixin";
  */
 export default {
   name: "form-last-name",
-  mixins: [mixinA, FormItemMixin],
+  mixins: [FormItemMixin],
   extends: FormField,
   props: {
     name: {
