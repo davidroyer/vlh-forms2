@@ -11,7 +11,7 @@ const VlhFormComponents = require.context("./components", true, /.vue$/);
 //   Vue.component('HelloB', HelloB)
 // }
 const VlhForms = {
-  install(Vue, options) {
+  install: function(Vue, options) {
     VlhFormComponents.keys().forEach(ComponentFileName => {
       const componentConfig = VlhFormComponents(ComponentFileName);
       // PascalCase name without file extension
@@ -80,4 +80,4 @@ if (typeof window !== "undefined" && window.Vue && window.VeeValidate) {
 
 // export default VlhForms;
 
-export default { install: VlhForms }
+export default VlhForms
