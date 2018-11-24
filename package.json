@@ -1,6 +1,6 @@
 {
   "name": "vlh-forms2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "author": {
     "name": "David Royer",
@@ -57,8 +57,7 @@
       "git add"
     ]
   },
-  "module": "dist/vlh-forms.common.min.js",
-  "main": "dist/vlh-forms.common.min.js",
+  "main": "dist/vlh-forms.common.js",
   "unpkg": "dist/vlh-forms.umd.min.js",
   "jsdelivr": "dist/vlh-forms.umd.min.js",
   "files": [
