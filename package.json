@@ -2,6 +2,14 @@
   "name": "vlh-forms2",
   "version": "0.1.0",
   "private": false,
+  "author": {
+    "name": "David Royer",
+    "email": "droyer01@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidroyer/vlh-forms2.git"
+  },  
   "scripts": {
     "dev": "yarn serve",
     "serve": "vue-cli-service serve --open",
@@ -50,7 +58,6 @@
     ]
   },
   "main": "dist/vlh-forms.common.min.js",
-  "module": "dist/vlh-forms.common.js",
   "unpkg": "dist/vlh-forms.umd.min.js",
   "jsdelivr": "dist/vlh-forms.umd.min.js",
   "files": [
@@ -58,5 +65,8 @@
     "dist/*.map",
     "dist/*.js",
     "src/*"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }  
 }
