@@ -117,7 +117,7 @@ var FormField = __webpack_require__("c1ee");
  */
 
 /* harmony default export */ var FormLastNamevue_type_script_lang_js_ = ({
-  name: "form-last-name",
+  name: "FormLastName",
   extends: FormField["default"],
   props: {
     name: {
@@ -1612,12 +1612,12 @@ module.exports = deburr;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5756d0e9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FormSelect.vue?vue&type=template&id=7eb3d474&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5756d0e9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FormSelect.vue?vue&type=template&id=66e3e79e&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":_vm.transition,"appear":""},on:{"before-enter":_vm.beforeEnter,"enter":_vm.enter,"after-enter":_vm.afterEnter,"before-leave":_vm.beforeLeave,"leave":_vm.leave}},[_c('div',{staticClass:"form-item"},[_c('label',{attrs:{"for":_vm.name}},[_vm._v(_vm._s(_vm.label))]),_c('div',{staticClass:"form-field-wrapper"},[_c('select',_vm._g(_vm._b({directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"},{name:"validate",rawName:"v-validate",value:(_vm.fieldValidation),expression:"fieldValidation"}],ref:_vm.name,staticClass:"select",class:{ invalid: _vm.errors.has(_vm.name), valid: _vm.fieldValidity },attrs:{"name":_vm.name,"id":_vm.fieldId,"aria-describedby":_vm.fieldId + '_help',"data-vv-as":_vm.validationName ? _vm.validationName : _vm.label},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();},"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.model=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},'select',_vm.$attrs,false),_vm.$listeners),[_c('option',{key:"initial",attrs:{"value":""},domProps:{"textContent":_vm._s(_vm.defaultText)}}),_vm._l((_vm.options),function(option){return _c('option',{key:option.id,attrs:{"id":option.id},domProps:{"value":option.id}},[_vm._v(_vm._s(option.name))])})],2),_c('form-help-icon',{attrs:{"icon":_vm.currentIcon}})],1),_c('form-help',{attrs:{"visible":_vm.showHelp,"id":_vm.fieldId + '_help',"helpText":_vm.errors.first(_vm.name)}})],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FormSelect.vue?vue&type=template&id=7eb3d474&
+// CONCATENATED MODULE: ./src/components/FormSelect.vue?vue&type=template&id=66e3e79e&
 
 // EXTERNAL MODULE: ./src/mixins/FormItemMixin.js
 var FormItemMixin = __webpack_require__("6528");
@@ -1682,7 +1682,7 @@ var FormItemMixin = __webpack_require__("6528");
  */
 
 /* harmony default export */ var FormSelectvue_type_script_lang_js_ = ({
-  name: "form-select",
+  name: "FormSelect",
   mixins: [FormItemMixin["a" /* default */]],
   props: {
     /**
@@ -3373,12 +3373,12 @@ exports.push([module.i, "\n*[data-v-7b595aa7]{will-change:height;transform:trans
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5756d0e9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FormField.vue?vue&type=template&id=dc2b5c98&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5756d0e9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FormField.vue?vue&type=template&id=61cfd1ea&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-item"},[_c('label',{attrs:{"for":_vm.name},domProps:{"textContent":_vm._s(_vm.label)}}),_c('div',{staticClass:"form-field-wrapper"},[_c('input',_vm._g(_vm._b({directives:[{name:"validate",rawName:"v-validate",value:(_vm.fieldValidation),expression:"fieldValidation"},{name:"model",rawName:"v-model.trim",value:(_vm.model),expression:"model",modifiers:{"trim":true}}],ref:_vm.name,staticClass:"input",attrs:{"name":_vm.name,"autocomplete":_vm.autocomplete,"pattern":_vm.pattern,"id":_vm.fieldId,"type":_vm.type,"data-vv-as":_vm.label,"data-vv-name":_vm.name,"data-vv-delay":300,"role":_vm.fieldRole,"aria-describedby":_vm.fieldId + '-help'},domProps:{"value":(_vm.model)},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();},"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value.trim()},"blur":function($event){_vm.$forceUpdate()}}},'input',_vm.$attrs,false),_vm.$listeners)),_c('form-help-icon',{class:{ invalid: _vm.errors.has(_vm.name), valid: _vm.fieldValidity },attrs:{"id":_vm.fieldId + '-help-icon',"icon":_vm.currentIcon}})],1),_c('form-help',{attrs:{"visible":_vm.showHelp,"id":_vm.fieldId + '-help',"helpText":_vm.errors.first(_vm.name)}})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FormField.vue?vue&type=template&id=dc2b5c98&
+// CONCATENATED MODULE: ./src/components/FormField.vue?vue&type=template&id=61cfd1ea&
 
 // EXTERNAL MODULE: ./src/mixins/FormItemMixin.js
 var FormItemMixin = __webpack_require__("6528");
@@ -3433,7 +3433,7 @@ var FormItemMixin = __webpack_require__("6528");
  */
 
 /* harmony default export */ var FormFieldvue_type_script_lang_js_ = ({
-  name: "form-field",
+  name: "FormField",
   mixins: [FormItemMixin["a" /* default */]],
   props: {
     /**
@@ -3564,12 +3564,12 @@ var FormField = __webpack_require__("c1ee");
 /**
  * The form component for first names
  * ```html
- * <form-first-name v-model="submit.firstName"/>
+ * <FormFirstName v-model="submit.firstName"/>
  * ```
  */
 
 /* harmony default export */ var FormFirstNamevue_type_script_lang_js_ = ({
-  name: "form-first-name",
+  name: "FormFirstName",
   extends: FormField["default"],
   props: {
     name: {

@@ -48,7 +48,7 @@ import FormItemMixin from "../mixins/FormItemMixin";
  * @mixin
  */
 export default {
-  name: "form-field",
+  name: "FormField",
   mixins: [FormItemMixin],
   props: {
     /**

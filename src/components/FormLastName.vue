@@ -8,7 +8,7 @@ import FormField from "./FormField.vue";
  * ```
  */
 export default {
-  name: "form-last-name",
+  name: "FormLastName",
   extends: FormField,
   props: {
     name: {

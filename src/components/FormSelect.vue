@@ -58,7 +58,7 @@ import FormItemMixin from "../mixins/FormItemMixin";
  * ```
  */
 export default {
-  name: "form-select",
+  name: "FormSelect",
   mixins: [FormItemMixin],
   props: {
     /**
