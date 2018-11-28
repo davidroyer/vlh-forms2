@@ -9,16 +9,16 @@ const VlhFormComponents = require.context("./components", true, /.vue$/);
 
 const VlhForms = {
   install: function(Vue, options) {
-    VlhFormComponents.keys().forEach(ComponentFileName => {
-      const componentConfig = VlhFormComponents(ComponentFileName);
+    VlhFormComponents.keys().forEach(fileName => {
+      const componentConfig = VlhFormComponents(fileName);
       // PascalCase name without file extension
 
       const componentName = componentConfig.default.name
         ? componentConfig.default.name
-        : upperFirst(camelCase(ComponentFileName.replace(/\.\w+$/, "")));
+        : upperFirst(camelCase(fileName.replace(/\.\w+$/, "")));
 
       // const componentName = upperFirst(
-      //   camelCase(ComponentFileName.replace(/\.\w+$/, ""))
+      //   camelCase(fileName.replace(/\.\w+$/, ""))
       // );
       // Globally register the component
       Vue.component(componentName, componentConfig.default || componentConfig);

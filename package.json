@@ -1,6 +1,6 @@
 {
   "name": "vlh-forms2",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "author": {
     "name": "David Royer",
@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "yarn serve",
     "serve": "vue-cli-service serve ./example --open",
-    "build": "vue-cli-service build --target lib ./src/lib.js",
+    "build": "vue-cli-service build --name vlh-forms2 --entry ./src/index.js --target lib",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
@@ -26,12 +26,12 @@
   },
   "devDependencies": {
     "@droyer/vdocs": "^0.0.5",
-    "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-plugin-eslint": "^3.1.5",
-    "@vue/cli-plugin-unit-jest": "^3.1.1",
-    "@vue/cli-service": "^3.1.4",
-    "@vue/eslint-config-prettier": "^4.0.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/cli-plugin-unit-jest": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/test-utils": "^1.0.0-beta.26",
     "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
