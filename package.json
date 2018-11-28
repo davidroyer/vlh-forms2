@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "yarn serve",
     "serve": "vue-cli-service serve ./example --open",
-    "build": "vue-cli-service build --name vlh-forms --entry ./src/lib.js --target lib",
+    "build": "vue-cli-service build --target lib ./src/lib.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
@@ -58,9 +58,9 @@
       "git add"
     ]
   },
-  "main": "dist/vlh-forms.common.js",
-  "unpkg": "dist/vlh-forms.umd.min.js",
-  "jsdelivr": "dist/vlh-forms.umd.min.js",
+  "main": "dist/vlh-forms2.umd.js",
+  "unpkg": "dist/vlh-forms2.umd.min.js",
+  "jsdelivr": "dist/vlh-forms2.umd.min.js",
   "files": [
     "dist/*.css",
     "dist/*.map",

@@ -12,9 +12,14 @@ const VlhForms = {
     VlhFormComponents.keys().forEach(ComponentFileName => {
       const componentConfig = VlhFormComponents(ComponentFileName);
       // PascalCase name without file extension
-      const componentName = upperFirst(
-        camelCase(ComponentFileName.replace(/\.\w+$/, ""))
-      );
+
+      const componentName = componentConfig.default.name
+        ? componentConfig.default.name
+        : upperFirst(camelCase(ComponentFileName.replace(/\.\w+$/, "")));
+
+      // const componentName = upperFirst(
+      //   camelCase(ComponentFileName.replace(/\.\w+$/, ""))
+      // );
       // Globally register the component
       Vue.component(componentName, componentConfig.default || componentConfig);
     });
@@ -70,9 +75,23 @@ const VlhForms = {
 };
 
 // Install by default if using the script tag
-if (typeof window !== "undefined" && window.Vue && window.VeeValidate) {
-  window.Vue.use(VeeValidate);
-  window.Vue.use(VlhForms);
+// if (typeof window !== "undefined" && window.Vue && window.VeeValidate) {
+//   window.Vue.use(VeeValidate);
+//   window.Vue.use(VlhForms);
+// }
+
+// export default VlhForms;
+let GlobalVue = null;
+if (typeof window !== "undefined") {
+  GlobalVue = window.Vue;
+} else if (typeof global !== "undefined") {
+  GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+  GlobalVue.use(VlhForms);
+  if (window.VeeValidate) {
+    GlobalVue.use(window.VeeValidate);
+  }
 }
 
 export default VlhForms;
