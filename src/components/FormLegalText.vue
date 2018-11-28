@@ -18,7 +18,7 @@
  * ```
  */
 export default {
-  name: "form-legal-text",
+  name: "FormLegalText",
   props: {
     school: {
       type: String,
