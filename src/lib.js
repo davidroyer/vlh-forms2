@@ -3,8 +3,6 @@ import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 import "./assets/styles/vlh-forms.scss";
 
-// or with global options Vue.use(VuePromiseBtn, {})
-// Register all Vue components in the `component` folder
 const VlhFormComponents = require.context("./components", true, /.vue$/);
 
 const VlhForms = {

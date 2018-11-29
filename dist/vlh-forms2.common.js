@@ -4183,8 +4183,7 @@ component.options.__file = "FormNotification.vue"
 // import { registerComponents } from "./helpers";
 
 
- // or with global options Vue.use(VuePromiseBtn, {})
-// Register all Vue components in the `component` folder
+
 
 var VlhFormComponents = __webpack_require__("d78d");
 
