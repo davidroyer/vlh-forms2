@@ -16,13 +16,6 @@
 </template>
 
 <script>
-/**
- * Form submit button
- *
- * ```html
- * <form-submit :disableOnErrors="true" text="Get Info"/>
- * ```
- */
 export default {
   name: "form-submit",
   inject: ["$validator"],

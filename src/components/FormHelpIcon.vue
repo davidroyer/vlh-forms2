@@ -17,7 +17,7 @@ export default {
       type: String
     },
     icon: {
-      type: [String, Object, Array]
+      type: [String, Object, Function, Array]
     }
   },
   components: { ValidIcon, ErrorIcon }

@@ -4,11 +4,11 @@ import FormField from "./FormField.vue";
 /**
  * The form component for first names
  * ```html
- * <FormFirstName v-model="submit.firstName"/>
+ * <form-first-name v-model="submit.firstName"/>
  * ```
  */
 export default {
-  name: "FormFirstName",
+  name: "form-first-name",
   extends: FormField,
   props: {
     name: {

@@ -7,15 +7,12 @@ import { MockData } from "./MockData/index.js";
 
 import VlhForms from "../src/lib";
 
-// import VlhForms from "../dist/vlh-forms.common.js";
-// import "../dist/vlh-forms.css";
-
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const ValidationConfig = {
   classes: true
 };
-Vue.use(VeeValidate);
+Vue.use(VeeValidate, ValidationConfig);
 Vue.use(VlhForms);
 // Vue.use();
 console.log(VlhForms);
