@@ -11,13 +11,13 @@
     :options="onlinePrograms">
   </form-select>
 
-  <form-first-name v-model="submit.firstName"></form-first-name>
-  <form-last-name v-model="submit.lastName"></form-last-name>
-  <form-zip v-model="submit.zip"></form-zip>
-  <form-phone v-model="submit.phone"></form-phone>
-  <form-email v-model="submit.email"></form-email>
-  <form-submit-button></form-submit-button>
-  <form-legal-text></form-legal-text>
+  <form-first-name v-model="submit.firstName"/>
+  <form-last-name v-model="submit.lastName"/>
+  <form-zip v-model="submit.zip"/>
+  <form-phone v-model="submit.phone"/>
+  <form-email v-model="submit.email"/>
+  <form-submit-button/>
+  <form-legal-text/>
 </form>
 ```
 
@@ -42,15 +42,13 @@
     :options="programsForSelectedDegreeLevel">
   </form-select>
 
-  <form-first-name
-    v-model="submit.firstName">
-  </form-first-name>
-  <form-last-name v-model="submit.lastName"></form-last-name>
-  <form-zip v-model="submit.zip"></form-zip>
-  <form-phone v-model="submit.phone"></form-phone>
-  <form-email v-model="submit.email"></form-email>
-  <form-submit-button></form-submit-button>
-  <form-legal-text></form-legal-text>
+  <form-first-name v-model="submit.firstName"/>
+  <form-last-name v-model="submit.lastName"/>
+  <form-zip v-model="submit.zip"/>
+  <form-phone v-model="submit.phone"/>
+  <form-email v-model="submit.email"/>
+  <form-submit-button/>
+  <form-legal-text/>
 </form>
 ```
 
@@ -89,14 +87,14 @@
       </form-step>
 
       <form-step :active-step="currentStep" v-if="currentStep == 2" :key="2">
-       <form-first-name v-model="submit.firstName"></form-first-name>
-       <form-last-name v-model="submit.lastName"></form-last-name>
+       <form-first-name v-model="submit.firstName"/>
+       <form-last-name v-model="submit.lastName"/>
       </form-step>
 
       <form-step :active-step="currentStep" v-if="currentStep == 3" :key="3">
-        <form-phone v-model="submit.phone"></form-phone>
-        <form-email v-model="submit.email"></form-email>
-        <form-zip v-model="submit.zip"></form-zip>
+        <form-phone v-model="submit.phone"/>
+        <form-email v-model="submit.email"/>
+        <form-zip v-model="submit.zip"/>
       </form-step>
     </transition>
   </div>
@@ -109,7 +107,7 @@
     submitBtnText="Submit Now">
   </step-form-controls>
 
-  <form-legal-text></form-legal-text>
+  <form-legal-text/>
 </form>
 ```
 
@@ -121,13 +119,13 @@
 <!-- Set the ID for this program with TLHFormsWP in the settings -->
 
 <form id="tlh-form" @submit.prevent="handleFormSubmission">
-  <form-first-name v-model="submit.firstName"></form-first-name>
-  <form-last-name v-model="submit.lastName"></form-last-name>
-  <form-zip v-model="submit.zip"></form-zip>
-  <form-phone v-model="submit.phone"></form-phone>
-  <form-email v-model="submit.email"></form-email>
-  <form-submit-button></form-submit-button>
-  <form-legal-text></form-legal-text>
+  <form-first-name v-model="submit.firstName"/>
+  <form-last-name v-model="submit.lastName"/>
+  <form-zip v-model="submit.zip"/>
+  <form-phone v-model="submit.phone"/>
+  <form-email v-model="submit.email"/>
+  <form-submit-button/>
+  <form-legal-text/>
 </form>
 ```
 
