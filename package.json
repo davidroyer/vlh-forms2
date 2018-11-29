@@ -1,6 +1,6 @@
 {
   "name": "vlh-forms2",
-  "version": "0.1.93",
+  "version": "0.1.94",
   "private": false,
   "author": {
     "name": "David Royer",
@@ -14,6 +14,7 @@
     "dev": "yarn serve",
     "serve": "vue-cli-service serve ./example --open",
     "build": "vue-cli-service build --target lib --name vlh-forms2 --entry ./src/index.js",
+    "build:backup": "vue-cli-service build --name vlh-forms2 --entry ./src/lib.js --target lib",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
