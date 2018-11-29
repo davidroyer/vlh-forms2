@@ -1,8 +1,8 @@
 module.exports = {
   lintOnSave: false,
-  // css: {
-  //   extract: false
-  // },
+  css: {
+    extract: false
+  },
   chainWebpack: config => {
     const svgRule = config.module.rule("svg");
 

@@ -17,13 +17,17 @@ const VlhForms = {
         ? componentConfig.default.name
         : upperFirst(camelCase(fileName.replace(/\.\w+$/, "")));
 
-      // const componentName = upperFirst(
-      //   camelCase(fileName.replace(/\.\w+$/, ""))
-      // );
-      // Globally register the component
       Vue.component(componentName, componentConfig.default || componentConfig);
     });
     // Add to Vue properties by exposing a getter for $bus
+    var EventBus = new Vue();
+    Object.defineProperties(Vue.prototype, {
+      $bus: {
+        get: function() {
+          return EventBus;
+        }
+      }
+    });
   }
 };
 
