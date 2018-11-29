@@ -881,64 +881,6 @@ exports.push([module.i, "\ninput[type=number]::-webkit-inner-spin-button,input[t
 
 /***/ }),
 
-/***/ "34e9":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("8103");
-/* harmony import */ var lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("bba4");
-/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _assets_styles_vlh_forms_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("215a");
-/* harmony import */ var _assets_styles_vlh_forms_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_styles_vlh_forms_scss__WEBPACK_IMPORTED_MODULE_2__);
-// import { registerComponents } from "./helpers";
-
-
- // or with global options Vue.use(VuePromiseBtn, {})
-// Register all Vue components in the `component` folder
-
-const VlhFormComponents = __webpack_require__("d78d");
-
-const VlhForms = {
-  install: function (Vue, options) {
-    VlhFormComponents.keys().forEach(fileName => {
-      const componentConfig = VlhFormComponents(fileName); // PascalCase name without file extension
-
-      const componentName = componentConfig.default.name ? componentConfig.default.name : lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0___default()(lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default()(fileName.replace(/\.\w+$/, "")));
-      Vue.component(componentName, componentConfig.default || componentConfig);
-    }); // Add to Vue properties by exposing a getter for $bus
-
-    var EventBus = new Vue();
-    Object.defineProperties(Vue.prototype, {
-      $bus: {
-        get: function () {
-          return EventBus;
-        }
-      }
-    });
-  }
-};
-let GlobalVue = null;
-
-if (typeof window !== "undefined") {
-  GlobalVue = window.Vue;
-} else if (typeof global !== "undefined") {
-  GlobalVue = global.Vue;
-}
-
-if (GlobalVue) {
-  GlobalVue.use(VlhForms);
-
-  if (window.VeeValidate) {
-    GlobalVue.use(window.VeeValidate);
-  }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (VlhForms);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("c8ba")))
-
-/***/ }),
-
 /***/ "3729":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3152,6 +3094,64 @@ component.options.__file = "FormNotification.vue"
 
 /***/ }),
 
+/***/ "b635":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("8103");
+/* harmony import */ var lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("bba4");
+/* harmony import */ var lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_camelCase__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_styles_vlh_forms_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("215a");
+/* harmony import */ var _assets_styles_vlh_forms_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_styles_vlh_forms_scss__WEBPACK_IMPORTED_MODULE_2__);
+// import { registerComponents } from "./helpers";
+
+
+ // or with global options Vue.use(VuePromiseBtn, {})
+// Register all Vue components in the `component` folder
+
+const VlhFormComponents = __webpack_require__("d78d");
+
+const VlhForms = {
+  install: function (Vue, options) {
+    VlhFormComponents.keys().forEach(fileName => {
+      const componentConfig = VlhFormComponents(fileName); // PascalCase name without file extension
+
+      const componentName = componentConfig.default.name ? componentConfig.default.name : lodash_upperFirst__WEBPACK_IMPORTED_MODULE_0___default()(lodash_camelCase__WEBPACK_IMPORTED_MODULE_1___default()(fileName.replace(/\.\w+$/, "")));
+      Vue.component(componentName, componentConfig.default || componentConfig);
+    }); // Add to Vue properties by exposing a getter for $bus
+
+    var EventBus = new Vue();
+    Object.defineProperties(Vue.prototype, {
+      $bus: {
+        get: function () {
+          return EventBus;
+        }
+      }
+    });
+  }
+};
+let GlobalVue = null;
+
+if (typeof window !== "undefined") {
+  GlobalVue = window.Vue;
+} else if (typeof global !== "undefined") {
+  GlobalVue = global.Vue;
+}
+
+if (GlobalVue) {
+  GlobalVue.use(VlhForms);
+
+  if (window.VeeValidate) {
+    GlobalVue.use(window.VeeValidate);
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (VlhForms);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("c8ba")))
+
+/***/ }),
+
 /***/ "b984":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4937,13 +4937,13 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// EXTERNAL MODULE: ./src/lib.js
-var lib = __webpack_require__("34e9");
+// EXTERNAL MODULE: ./src/index.js
+var src = __webpack_require__("b635");
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (lib["a" /* default */]);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src["a" /* default */]);
 
 
 
