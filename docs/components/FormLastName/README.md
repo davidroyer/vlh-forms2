@@ -1,5 +1,5 @@
 
-# form-last-name
+# FormLastName
 The form component for last names
 ```html
 <form-last-name v-model="submit.lastName"/>

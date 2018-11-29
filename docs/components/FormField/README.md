@@ -1,5 +1,5 @@
 
-# form-field
+# FormField
 The base component for all inputs
 
 ```html

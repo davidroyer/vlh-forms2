@@ -31,19 +31,13 @@ const VlhForms = {
   }
 };
 
-// Install by default if using the script tag
-// if (typeof window !== "undefined" && window.Vue && window.VeeValidate) {
-//   window.Vue.use(VeeValidate);
-//   window.Vue.use(VlhForms);
-// }
-
-// export default VlhForms;
 let GlobalVue = null;
 if (typeof window !== "undefined") {
   GlobalVue = window.Vue;
 } else if (typeof global !== "undefined") {
   GlobalVue = global.Vue;
 }
+
 if (GlobalVue) {
   GlobalVue.use(VlhForms);
   if (window.VeeValidate) {
