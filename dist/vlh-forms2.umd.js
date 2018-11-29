@@ -861,12 +861,12 @@ var update = add("180b5cd7", content, true, {"sourceMap":false,"shadowMode":fals
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a39544c8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FormStep.vue?vue&type=template&id=4730e200&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"step"},[_vm._t("default",[_c('p',[_vm._v("This should not show up unless theres nothing inside component in parent")])])],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a39544c8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/FormStep.vue?vue&type=template&id=6c77827b&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"step"},[_vm._t("default",[_c('p',[_vm._v("\n      This should not show up unless theres nothing inside component in parent\n    ")])])],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/FormStep.vue?vue&type=template&id=4730e200&
+// CONCATENATED MODULE: ./src/components/FormStep.vue?vue&type=template&id=6c77827b&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
 var web_dom_iterable = __webpack_require__("ac6a");
@@ -893,20 +893,22 @@ var es6_number_constructor = __webpack_require__("c5f6");
 //
 //
 //
+//
+//
 
 /**
-* Used in step-forms. 
-*
-* ```html
-* <form-step :active-step="currentStep" v-if="currentStep == 1" :key="1">
-*  <form-first-name v-model="submit.firstName"/>
-*  <form-last-name v-model="submit.lastName"/>
-* </form-step>
-* ```
-*/
+ * Used in step-forms.
+ *
+ * ```html
+ * <form-step :active-step="currentStep" v-if="currentStep == 1" :key="1">
+ *  <form-first-name v-model="submit.firstName"/>
+ *  <form-last-name v-model="submit.lastName"/>
+ * </form-step>
+ * ```
+ */
 /* harmony default export */ var FormStepvue_type_script_lang_js_ = ({
-  name: 'form-step',
-  inject: ['$validator'],
+  name: "form-step",
+  inject: ["$validator"],
   props: {
     activeStep: {
       type: [Number, String],
@@ -915,7 +917,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
   },
   data: function data() {
     return {
-      inputId: ''
+      inputId: ""
     };
   },
   computed: {
@@ -932,7 +934,7 @@ var es6_number_constructor = __webpack_require__("c5f6");
   },
   mounted: function mounted() {
     if (this.activeStep > 1 && this.activeStep == this.stepID) {
-      this.$bus.$emit('set-focus', this.firstField);
+      this.$bus.$emit("set-focus", this.firstField);
     }
   }
 });
@@ -1288,7 +1290,6 @@ exports.push([module.i, "\ninput[type=number]::-webkit-inner-spin-button,input[t
 
 
 
-// import { registerComponents } from "./helpers";
 
 
 
@@ -1298,8 +1299,7 @@ var VlhFormComponents = __webpack_require__("d78d");
 var VlhForms = {
   install: function install(Vue, options) {
     VlhFormComponents.keys().forEach(function (fileName) {
-      var componentConfig = VlhFormComponents(fileName); // PascalCase name without file extension
-
+      var componentConfig = VlhFormComponents(fileName);
       var componentName = componentConfig.default.name ? componentConfig.default.name : lodash_upperFirst__WEBPACK_IMPORTED_MODULE_6___default()(lodash_camelCase__WEBPACK_IMPORTED_MODULE_7___default()(fileName.replace(/\.\w+$/, "")));
       Vue.component(componentName, componentConfig.default || componentConfig);
     }); // Add to Vue properties by exposing a getter for $bus
@@ -5350,12 +5350,12 @@ module.exports = function (it) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a39544c8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/StepFormControls.vue?vue&type=template&id=6b5a34dd&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a39544c8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/StepFormControls.vue?vue&type=template&id=b605e48c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"stepFormControls"},[(_vm.activeStep > 1)?_c('button',{staticClass:"previous-button",domProps:{"textContent":_vm._s(_vm.previousBtnText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.$emit('previous-step');},"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();_vm.$emit('previous-step');}}},[_vm._v("\n    Previous\n  ")]):_vm._e(),(_vm.activeStep < _vm.steps)?_c('button',{staticClass:"next-button",domProps:{"textContent":_vm._s(_vm.nextBtnText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);},"mousedown":function($event){$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);},"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);}}}):_vm._e(),_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/StepFormControls.vue?vue&type=template&id=6b5a34dd&
+// CONCATENATED MODULE: ./src/components/StepFormControls.vue?vue&type=template&id=b605e48c&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.number.constructor.js
 var es6_number_constructor = __webpack_require__("c5f6");
@@ -5385,7 +5385,6 @@ var es6_number_constructor = __webpack_require__("c5f6");
 //
 //
 //
-// import FormSubmitButtonNew from "./FormSubmitButtonNew.vue";
 /* harmony default export */ var StepFormControlsvue_type_script_lang_js_ = ({
   name: "step-form-controls",
   props: {

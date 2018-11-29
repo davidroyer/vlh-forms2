@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "yarn serve",
-    "serve": "vue-cli-service serve ./example --open",
+    "serve": "vue-cli-service serve ./examples --open",
     "build": "vue-cli-service build --target lib --name vlh-forms2 --entry ./src/lib.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",

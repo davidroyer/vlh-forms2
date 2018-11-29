@@ -1,4 +1,3 @@
-// import { registerComponents } from "./helpers";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 import "./assets/styles/vlh-forms.scss";
@@ -9,7 +8,6 @@ const VlhForms = {
   install: function(Vue, options) {
     VlhFormComponents.keys().forEach(fileName => {
       const componentConfig = VlhFormComponents(fileName);
-      // PascalCase name without file extension
 
       const componentName = componentConfig.default.name
         ? componentConfig.default.name

@@ -22,7 +22,6 @@
 </template>
 
 <script>
-// import FormSubmitButtonNew from "./FormSubmitButtonNew.vue";
 export default {
   name: "step-form-controls",
   props: {
