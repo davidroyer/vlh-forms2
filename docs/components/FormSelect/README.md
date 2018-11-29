@@ -1,5 +1,5 @@
 
-# FormSelect
+# form-select
 The select menu element used for displaying a list of options
 such as degree levels or programs
 

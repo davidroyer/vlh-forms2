@@ -1,8 +1,8 @@
 
-# FormFirstName
+# form-first-name
 The form component for first names
 ```html
-<FormFirstName v-model="submit.firstName"/>
+<form-first-name v-model="submit.firstName"/>
 ```
 
 ## Props

@@ -1,9 +1,9 @@
 
 # form-phone
-The base component for all inputs
+The form component for emails
 
 ```html
-<form-field id="text" v-model="submit.formField" label="Form Field Example"/>
+<form-phone v-model="submit.phone"/>
 ```
 
 ## Props
