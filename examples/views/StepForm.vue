@@ -42,8 +42,8 @@
       :active-step="currentStep"
       @previous-step="handlePreviousStep"
       @next-step="handleNextStep"
+      submitBtnText="BtnText From Prop"
     >
-      <form-submit color="#222" text-color="white" />
     </step-form-controls>
     <form-legal-text />
   </form>

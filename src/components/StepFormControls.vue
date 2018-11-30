@@ -83,7 +83,7 @@ export default {
      * Determines if the includes `form-submit` component should be used.
      */
     usingBuiltInFormSubmit() {
-      const lastStep = this.activeStep == this.totalSteps ? true : false;
+      const lastStep = this.activeStep == this.steps ? true : false;
       if (lastStep && this.submitBtnText) {
         return true;
       } else {
