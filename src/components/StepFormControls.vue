@@ -17,14 +17,28 @@
       @keydown.enter.stop.prevent="nextStep($event);"
       v-text="nextBtnText"
     ></button>
-    <slot></slot>
+    <form-submit
+      v-if="usingBuiltInFormSubmit"
+      color="#222"
+      text-color="white"
+      :text="submitBtnText"
+    />
+    <slot />
   </div>
 </template>
 
 <script>
+/**
+ * Consists the flow for a step-form.
+ * It consist of 2 regular HTML button elements for controlling previous and next steps
+ * as well as the custom `form-submit` component
+ */
 export default {
   name: "step-form-controls",
   props: {
+    /**
+     * The number of steps that exist for this form
+     */
     steps: {
       type: [Number, String],
       required: true
@@ -33,23 +47,51 @@ export default {
       type: [Number, String],
       required: true
     },
+
+    /**
+     * The text for the previous button
+     */
     previousBtnText: {
       type: String,
       default: "Previous"
     },
+
+    /**
+     * The text for the next button
+     */
     nextBtnText: {
       type: String,
       default: "Next"
     },
+
+    /**
+     * The button text to be passed to the `form-submit` component
+     */
     submitBtnText: {
       type: String
     }
   },
   computed: {
+    /**
+     * Uses parent components `currentStep` property to know where we are in the in the step-form
+     */
     currentStepFromParent() {
       return this.$parent.currentStep;
+    },
+
+    /**
+     * Determines if the includes `form-submit` component should be used.
+     */
+    usingBuiltInFormSubmit() {
+      const lastStep = this.activeStep == this.totalSteps ? true : false;
+      if (lastStep && this.submitBtnText) {
+        return true;
+      } else {
+        return false;
+      }
     }
   },
+
   methods: {
     previousStep($event) {},
 

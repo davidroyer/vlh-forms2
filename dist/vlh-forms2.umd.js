@@ -5356,12 +5356,12 @@ module.exports = function (it) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a39544c8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/StepFormControls.vue?vue&type=template&id=b605e48c&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"stepFormControls"},[(_vm.activeStep > 1)?_c('button',{staticClass:"previous-button",domProps:{"textContent":_vm._s(_vm.previousBtnText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.$emit('previous-step');},"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();_vm.$emit('previous-step');}}},[_vm._v("\n    Previous\n  ")]):_vm._e(),(_vm.activeStep < _vm.steps)?_c('button',{staticClass:"next-button",domProps:{"textContent":_vm._s(_vm.nextBtnText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);},"mousedown":function($event){$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);},"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);}}}):_vm._e(),_vm._t("default")],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a39544c8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/StepFormControls.vue?vue&type=template&id=5bd62714&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"stepFormControls"},[(_vm.activeStep > 1)?_c('button',{staticClass:"previous-button",domProps:{"textContent":_vm._s(_vm.previousBtnText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.$emit('previous-step');},"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();_vm.$emit('previous-step');}}},[_vm._v("\n    Previous\n  ")]):_vm._e(),(_vm.activeStep < _vm.steps)?_c('button',{staticClass:"next-button",domProps:{"textContent":_vm._s(_vm.nextBtnText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);},"mousedown":function($event){$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);},"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }$event.stopPropagation();$event.preventDefault();_vm.nextStep($event);}}}):_vm._e(),(_vm.usingBuiltInFormSubmit)?_c('form-submit',{attrs:{"color":"#222","text-color":"white","text":_vm.submitBtnText}}):_vm._e(),_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/StepFormControls.vue?vue&type=template&id=b605e48c&
+// CONCATENATED MODULE: ./src/components/StepFormControls.vue?vue&type=template&id=5bd62714&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.number.constructor.js
 var es6_number_constructor = __webpack_require__("c5f6");
@@ -5391,9 +5391,24 @@ var es6_number_constructor = __webpack_require__("c5f6");
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
+/**
+ * Consists the flow for a step-form.
+ * It consist of 2 regular HTML button elements for controlling previous and next steps
+ * as well as the custom `form-submit` component
+ */
 /* harmony default export */ var StepFormControlsvue_type_script_lang_js_ = ({
   name: "step-form-controls",
   props: {
+    /**
+     * The number of steps that exist for this form
+     */
     steps: {
       type: [Number, String],
       required: true
@@ -5402,21 +5417,49 @@ var es6_number_constructor = __webpack_require__("c5f6");
       type: [Number, String],
       required: true
     },
+
+    /**
+     * The text for the previous button
+     */
     previousBtnText: {
       type: String,
       default: "Previous"
     },
+
+    /**
+     * The text for the next button
+     */
     nextBtnText: {
       type: String,
       default: "Next"
     },
+
+    /**
+     * The button text to be passed to the `form-submit` component
+     */
     submitBtnText: {
       type: String
     }
   },
   computed: {
+    /**
+     * Uses parent components `currentStep` property to know where we are in the in the step-form
+     */
     currentStepFromParent: function currentStepFromParent() {
       return this.$parent.currentStep;
+    },
+
+    /**
+     * Determines if the includes `form-submit` component should be used.
+     */
+    usingBuiltInFormSubmit: function usingBuiltInFormSubmit() {
+      var lastStep = this.activeStep == this.totalSteps ? true : false;
+
+      if (lastStep && this.submitBtnText) {
+        return true;
+      } else {
+        return false;
+      }
     }
   },
   methods: {
