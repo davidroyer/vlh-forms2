@@ -17,7 +17,7 @@
       @keydown.enter.stop.prevent="nextStep($event);"
       v-text="nextBtnText"
     ></button>
-    <slot />
+    <slot></slot>
   </div>
 </template>
 
