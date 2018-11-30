@@ -10,7 +10,6 @@ export default ({
     const ValidationConfig = {
         classes: true
       };
-      console.log(VeeValidate)
       Vue.use(VeeValidate, ValidationConfig);
       Vue.use(VlhForms);
 

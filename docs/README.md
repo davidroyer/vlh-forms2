@@ -2,18 +2,22 @@
 
 Plugin for Learning House Forms using Vue.js
 
-<form-legal-text
-    school="Alvernia University"
-    fontSize="1.1em"
-    textColor="blue"
-    ></form-legal-text>
 
 <example/>
+<!-- <example>
+    <h2>Example 1</h2>
+    <form slot="formExample" id="tlh-form">
+        <form-first-name v-model="submit.firstName"/>
+        <form-email v-model="submit.email"/>
+        <form-zip v-model="submit.zip"/>
+        <form-submit text="Get Started"/>
+    </form>
 
-<form id="tlh-form">
-<form-first-name v-model="submit.firstName"/>
-<form-email v-model="submit.email"/>
-</form>
+</example> -->
+
+<!-- <pre style="color: white;">{{submit}}</pre> -->
+
+<!-- {{submit.firstName}} -->
 
 
 This is a Vue.js component library for the Learning House Marketing Forms.

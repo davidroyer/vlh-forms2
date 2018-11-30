@@ -1,13 +1,8 @@
 # Examples
 
 ## Basic Example
-  
 
-
-<form-legal-text></form-legal-text>
-<example>
-
-</example>
+<example/>
 
 ```html
 <form id="tlh-form" @submit.prevent="handleFormSubmission">
